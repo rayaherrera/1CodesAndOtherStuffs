@@ -57,15 +57,15 @@ else:
 
     # String Methods to investigate:
     # Method        Use Example         Explanation
-    # center        aStr.center(w)
-    # ljust         aStr.ljust(w)
-    # rjust         aStr.rjust(w)
-    # upper         aStr.upper()
-    # lower         aStr.lower()
-    # index         aStr.index(item)
-    # rindex        aStr.rindex(item)
-    # find          aStr.find(item)
-    # rfind         aStr.rfind(item)
-    # replace       aStr.replace(old, new)
+    # center        aStr.center(w)      returns a centered string
+    # ljust         aStr.ljust(w)       returns a left justified version of the string
+    # rjust         aStr.rjust(w)       returns a right justified version of the string
+    # upper         aStr.upper()        converts a string into upper case
+    # lower         aStr.lower()        converts a string into lower case
+    # index         aStr.index(item)        searches the string for a specified value and returns the position of where it was found
+    # rindex        aStr.rindex(item)       searches the string for a specified value and returns the last position of where it was found
+    # find          aStr.find(item)     searches the string for a specified value and returns the position of where it was found
+    # rfind         aStr.rfind(item)        searches the string for a specified value and returns the last position of where it was found
+    # replace       aStr.replace(old, new)      returns a string where a specified value is replaced with a specified value
 
     # Be sure to include multiple examples of all of them in use
