@@ -68,4 +68,26 @@ else:
 # rfind         aStr.rfind(item)        searches the string for a specified value and returns the last position of where it was found
 # replace       aStr.replace(old, new)      returns a string where a specified value is replaced with a specified value
 
-    # Be sure to include multiple examples of all of them in use
+
+# Character Functions
+
+print(ord('5'))
+
+print(chr(97+13))
+
+print(str(12548))
+
+# testing functions from mapper.py
+
+from mapper import *
+
+print(letterToIndex('P'))
+print(indexToLetter(10))
+
+from crypto import *
+
+print(scramble2Encrypt("GOOD MORNING LADIES AND GENTLEMEN"))
+
+print(scramble2Decrypt("ODMRIGLDE N ETEEGO ONN AISADGNLMN"))
+
+stripSpace("Lubbock High School is the best high school")
