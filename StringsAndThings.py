@@ -91,3 +91,7 @@ print(scramble2Encrypt("GOOD MORNING LADIES AND GENTLEMEN"))
 print(scramble2Decrypt("ODMRIGLDE N ETEEGO ONN AISADGNLMN"))
 
 stripSpace("Lubbock High School is the best high school")
+
+print(caesarEncrypt("I committed to playing soccer at Penn State", 4))
+
+print(caesarDecrypt("MdgsqqmxxihdxsdtpecmrkdwsggivdexdTirrdWxexi", 4))

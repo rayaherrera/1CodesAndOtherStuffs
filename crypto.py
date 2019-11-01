@@ -39,65 +39,42 @@ def encryptMessage():
 def stripSpace(text):
     print(text.replace(" ", ""))
 
+
 # write a caesarEncrypt(plainText, shift)
-def caesarencrypt(plainText, shift):
-    result = ""
-for i in range(len(plainText)):
-    char = plainText[i]
+def caesar2Encrypt(plainText, shift):
+    plainText = ""
+upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lower = "abcdefghijklmnopqrstuvwxyz"
+def caesarEncrypt(plainText, shift):
+    cipherText = ""
+    for ch in plainText:
+        if ch in upper:
+            index = upper.find(ch)
+            nextIndex = (index + shift) % 26
+            cipherText += upper[nextIndex]
+        else:
+            index = lower.find(ch)
+            nextIndex = (index + shift) % 26
+            cipherText += lower[nextIndex]
+    return cipherText
 
-    if (char.isupper()):
-        result += chr((ord(char) + s - 65) % 26 + 65)
-    else:
-        result += chr((ord(char) + s - 97) % 26 + 97)
-    return result
-plainText = "CEASER CIPHER DEMO"
-s = 4
-
-print("Plain Text : " + text
-print
-"Shift pattern : " + str(s)
-print
-"Cipher: " + encrypt(text, s)
-
-#another try
-key = 'abcdefghijklmnopqrstuvwxyz'
-
-def encrypt(n, plaintext):
-    """Encrypt the string and return the ciphertext"""
-    result = ''
-
-    for l in plaintext.lower():
-        try:
-            i = (key.index(l) + n) % 26
-            result += key[i]
-        except ValueError:
-            result += l
-
-    return result.lower()
-
-def decrypt(n, ciphertext):
-    """Decrypt the string and return the plaintext"""
-    result = ''
-
-    for l in ciphertext:
-        try:
-            i = (key.index(l) - n) % 26
-            result += key[i]
-        except ValueError:
-            result += l
-
-    return result
-
-text = "I committed to playing soccer at Penn State!"
-offset = 5
-
-encrypted = encrypt(offset, text)
-print('Encrypted:', encrypted)
-
-decrypted = decrypt(offset, encrypted)
-print('Decrypted:', decrypted)
-
-
-
+print(caesarEncrypt("I committed to playing soccer at Penn State", 2))
 
 # write a caesarDecrypt(cipherText, shift)
+
+def caesarDecrypt(plainText, shift):
+    cipherText = ""
+    for ch in plainText:
+        if ch in upper:
+            index = upper.find(ch)
+            nextIndex = (index + shift) % 27
+            if nextIndex < 0:
+                nextIndex = 27 + nextIndex
+            cipherText += upper[nextIndex]
+        else:
+            index = lower.find(ch)
+            nextIndex = (index + shift) % 27
+            if nextIndex < 0:
+                nextIndex = 27 + nextIndex
+                cipherText += lower[nextIndex]
+        return cipherText
